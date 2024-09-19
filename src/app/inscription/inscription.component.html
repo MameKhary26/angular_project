@@ -1,0 +1,24 @@
+<div class="login-container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h2> Page d'Inscription</h2>
+    <div class="form-group">
+      <label for="nom" >Prenom</label>
+      <input type="text" id="prenom" formControlName="prenom" required>
+    </div>
+    <div class="form-group">
+      <label for="nom" >Nom</label>
+      <input type="nom" id="nom" formControlName="nom" required>
+    </div>
+    <div class="form-group">
+      <label for="email" >Email</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div class="form-group">
+      <label for="motPasse">Mot de passe</label>
+      <input type="password" id="motPasse" formControlName="motPasse" required>
+    </div>
+    <button type="submit" class="btn btn-secondary">Creer</button>
+  </form>
+</div>
+
+  

@@ -31,15 +31,29 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/style.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/jquery.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/jquery-ui.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/jquery.fancybox.js",
+              "src/assets/js/isotope.js",
+              "src/assets/js/owl.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/appear.js",
+              "src/assets/js/scrollbar.js",
+              "src/assets/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -102,5 +116,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

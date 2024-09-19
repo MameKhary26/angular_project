@@ -1,0 +1,28 @@
+<div class="login-container">
+<div class="container">
+    <h2>Mes Transactions</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Montant</th>
+          <th>Date</th>
+          <th>Statut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.id }}</td>
+          <td>{{ transaction.typeTransaction }}</td>
+          <td>{{ transaction.montant }} €</td>
+          <td>{{ transaction.dateTransaction }}</td>
+          <td>{{ transaction.statutTransaction }}</td>
+        </tr>
+      </tbody>
+      <br>
+      <a href="http://localhost:8000/api/transactions/download-pdf" class="btn btn-primary">Télécharger le rapport PDF</a>
+    </table>
+  </div>
+</div>
+  

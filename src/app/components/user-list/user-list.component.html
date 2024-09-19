@@ -1,0 +1,84 @@
+<!-- <div class="login-container">
+<div class="container">
+    <h1>Liste des utilisateurs</h1>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th>Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.nom }}</td>
+          <td>{{ user.prenom }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.type }}</td>
+          <td>
+            <button (click)="getUsers()" class="btn btn-danger">Modifier</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-danger">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <h2>Ajouter un utilisateur</h2>
+    <form (ngSubmit)="addUser()">
+      <input type="text" [(ngModel)]="newUser.nom" formControlName="nom" placeholder="Nom" required>
+      <input type="text" [(ngModel)]="newUser.prenom" formControlName="prenom" placeholder="Prénom" required>
+      <input type="email" [(ngModel)]="newUser.email" formControlName="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="newUser.password" formControlName="password" placeholder="Mot de passe" required>
+      <select [(ngModel)]="newUser.type" name="type">
+        <option value="client">Client</option>
+        <option value="gestionnaire">Gestionnaire</option>
+        <option value="administrateur">Administrateur</option>
+      </select>
+      <button type="submit" class="btn btn-success">Ajouter</button>
+    </form>
+  </div>
+</div> -->
+<div class="login-container">
+  <div class="container">
+    <h1>Liste des utilisateurs</h1>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Email</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.nom }}</td>
+      <td>{{ user.prenom }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.type }}</td>
+      <td>
+        <button (click)="getUsers()" class="btn btn-gray">Modifier</button>
+        <button (click)="deleteUser(user.id)" class="btn btn-light">Supprimer</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Ajouter un utilisateur</h2>
+    <form (ngSubmit)="addUser()">
+      <input type="text" [(ngModel)]="newUser.nom" formControlName="nom" placeholder="Nom" required>
+      <input type="text" [(ngModel)]="newUser.prenom" formControlName="prenom" placeholder="Prénom" required>
+      <input type="email" [(ngModel)]="newUser.email" formControlName="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="newUser.password" formControlName="password" placeholder="Mot de passe" required>
+      <select [(ngModel)]="newUser.type" name="type">
+        <option value="client">Client</option>
+        <option value="gestionnaire">Gestionnaire</option>
+        <option value="administrateur">Administrateur</option>
+      </select>
+      <button type="submit" class="btn btn-success">Ajouter</button>
+    </form>
+</div>
+</div>

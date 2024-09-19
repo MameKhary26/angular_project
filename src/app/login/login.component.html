@@ -1,0 +1,21 @@
+ <div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <!-- <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="motPasse" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button> -->
+  <h2> Page de Connexion</h2>
+    <div class="form-group">
+      <label for="email" >Email</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div class="form-group">
+      <label for="motPasse">Mot de passe</label>
+      <input type="password" id="motPasse" formControlName="motPasse" required>
+    </div>
+    <button type="submit" class="btn btn-secondary">Se connecter</button>
+    <br>
+    <br>
+    <!-- <a type="submit" class="btn btn-success" >Creer un compte</a> -->
+  </form>
+   </div>
+  
