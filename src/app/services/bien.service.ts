@@ -14,8 +14,8 @@ export class BienService {
     if (filters.adresse) {
       params = params.append('adresse', filters.adresse);
     }
-    if (filters.type) {
-      params = params.append('type', filters.type);
+    if (filters.typePropriete) {
+      params = params.append('typePropriete', filters.typePropriete);
     }
     if (filters.prix) {
       params = params.append('prix', filters.prix);
@@ -23,9 +23,9 @@ export class BienService {
     // if (filters.prix_max) {
     //   params = params.append('prix_max', filters.prix_max);
     // }
-    // if (filters.superficie_min) {
-    //   params = params.append('superficie_min', filters.superficie_min);
-    // }
+    if (filters.superficie) {
+      params = params.append('superficie', filters.superficie);
+    }
     // if (filters.superficie_max) {
     //   params = params.append('superficie_max', filters.superficie_max);
     // }

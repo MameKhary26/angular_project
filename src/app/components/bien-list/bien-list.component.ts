@@ -11,9 +11,9 @@ export class BienListComponent implements OnInit {
   filters = {
     adresse: '',
     type: '',
-    prix: null
+    prix: null,
     // prix_max: null,
-    // superficie_min: null,
+    superficie: null,
     // superficie_max: null
   };
 

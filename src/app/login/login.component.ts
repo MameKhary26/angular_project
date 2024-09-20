@@ -132,15 +132,25 @@ export class LoginComponent {
     motPasse: new FormControl('', [Validators.required])
   });
 
-  constructor(private authService: AuthService,private route:Router) {}
+  constructor(private authService: AuthService,private router:Router) {}
 
   login() {
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value).subscribe(
         (response) => {
+          const pro = response.profil;
           console.log('Login successful', response);
           localStorage.setItem('token', response.token); // Stock the token in local storage
-          window.location.href = '/assets/index-2.html';
+          // window.location.href = '/assets/index-2.html';
+          if(pro === "1")
+          {
+            this.router.navigate(['user-list']);
+          }
+          if(pro === "0")
+            {
+              window.location.href = '/assets/index-2.html';
+            }
+          this.router.navigate([response.redirect]);
         },
         (error) => {
           console.error('Login failed', error);
@@ -148,4 +158,5 @@ export class LoginComponent {
       );
     }
   }
+  
 }

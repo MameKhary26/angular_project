@@ -41,16 +41,99 @@
     </form>
   </div>
 </div> -->
+<div class="page-wrapper">
+  <!-- Preloader -->
+  <!-- <div class="preloader"></div> -->
+
+  <header class="main-header header-style-one">
+      <!--Header Top-->
+      <div class="header-top">
+          <div class="auto-container clearfix">
+              <div class="top-left clearfix">
+                  <div class="text"><span class="icon flaticon-call-answer"></span> Besoin d'aide ? Contactez-nous maintenant : <a href="tel:1800-456-7890" class="number">33 820 84 32</a></div>
+        
+              </div>
+              <div class="top-right clearfix">
+                  <!-- Info List -->
+        <ul class="info-list">
+                      <li><a href="about.html">Notre histoire</a></li>
+                      <li><a href="blog.html">Inspiration</a></li>
+          <li class="quote"><a href="contact.html">Obtenir un devis gratuit</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- End Header Top -->
+
+      <!-- Header Upper -->
+      <div class="header-upper">
+          <div class="inner-container">
+              <div class="auto-container clearfix">
+                  <!--Info-->
+                  <div class="logo-outer">
+                      <div class="logo "><a href="index-2.html"><img src="assets/images/CaptureS.SPNG.PNG" alt="" title=""></a></div>
+                  </div>
+                  <div class="nav-outer clearfix">
+                    <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+                    <nav class="main-menu navbar-expand-md navbar-light">
+                        <div class="navbar-header">
+                            <!-- Togg le Button -->      
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon flaticon-menu-1"></span>
+                            </button>
+                        </div>
+                        
+
+                    </nav>
+                    <!-- Main Menu End-->
+        
+        <!-- Outer Box -->
+                    <div class="outer-box clearfix">
+                        <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header Upper-->
+
+  <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
+        
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+            <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
+    <!--Social Links-->
+    <div class="social-links">
+      <ul class="clearfix">
+        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+      </ul>
+            </div>
+        </nav>
+    </div><!-- End Mobile Menu -->
+</header>
+<div class="contain">
 <div class="login-container">
   <div class="container">
-    <h1>Liste des utilisateurs</h1>
-<table class="table table-dark">
+    <!-- <button class="btn btn-light ">Ajouter</button> -->
+     <br>
+     <br>
+     <br>
+     <br>
+    <h1 class="text-center" style="color: white;">Liste des utilisateurs</h1>
+  <table class="table table-dark">
   <thead>
     <tr>
       <th>Nom</th>
       <th>Prénom</th>
       <th>Email</th>
-      <th>Type</th>
+      <th>Profil</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -59,7 +142,7 @@
       <td>{{ user.nom }}</td>
       <td>{{ user.prenom }}</td>
       <td>{{ user.email }}</td>
-      <td>{{ user.type }}</td>
+      <td>{{ user.profil }}</td>
       <td>
         <button (click)="getUsers()" class="btn btn-gray">Modifier</button>
         <button (click)="deleteUser(user.id)" class="btn btn-light">Supprimer</button>
@@ -67,7 +150,8 @@
     </tr>
   </tbody>
 </table>
-<h2>Ajouter un utilisateur</h2>
+<button class="btn btn-light ">Ajouter</button>
+<!-- <h2>Ajouter un utilisateur</h2>
     <form (ngSubmit)="addUser()">
       <input type="text" [(ngModel)]="newUser.nom" formControlName="nom" placeholder="Nom" required>
       <input type="text" [(ngModel)]="newUser.prenom" formControlName="prenom" placeholder="Prénom" required>
@@ -79,6 +163,8 @@
         <option value="administrateur">Administrateur</option>
       </select>
       <button type="submit" class="btn btn-success">Ajouter</button>
-    </form>
+    </form> -->
+</div>
+</div>
 </div>
 </div>
