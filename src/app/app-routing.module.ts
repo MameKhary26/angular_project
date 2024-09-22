@@ -9,6 +9,12 @@ import { BienListComponent } from './components/bien-list/bien-list.component';
 import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
 import { HomeComponent } from './home/home.component';
 import { DirectionComponent } from './direction/direction.component';
+import { LocationComponent } from './location/location.component';
+import { VenteComponent } from './vente/vente.component';
+import { BienFormComponent } from './bien-form/bien-form.component';
+import { LocationFormComponent } from './location-form/location-form.component';
+import { GestionnaireComponent } from './gestionnaire/gestionnaire.component';
+
 // import{ loginGuard } from '. /guard/login.guard';
 
 const routes: Routes = [
@@ -24,8 +30,33 @@ const routes: Routes = [
   },
 
   { 
+    path: 'bien-form', 
+    component: BienFormComponent
+  },
+
+  { 
+    path: 'gestionnaire', 
+    component: GestionnaireComponent
+  },
+
+  { 
     path: 'direction', 
     component: DirectionComponent
+  },
+
+  { 
+    path: 'biens', 
+    component: BienFormComponent
+  },
+
+  { 
+    path: 'location', 
+    component: LocationComponent
+  },
+
+  { 
+    path: 'vente', 
+    component: VenteComponent
   },
 
   { 
@@ -36,6 +67,10 @@ const routes: Routes = [
   { path: 'login',
      component: LoginComponent,
    },
+
+   { path: 'location-form',
+    component: LocationFormComponent,
+  },
 
    { 
     path: 'user-list', 

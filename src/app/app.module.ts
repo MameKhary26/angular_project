@@ -15,6 +15,13 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth-interceptor.service';
 import { HomeComponent } from './home/home.component';
 import { DirectionComponent } from './direction/direction.component';
+import { LocationComponent } from './location/location.component';
+import { VenteComponent } from './vente/vente.component';
+import { GestionnaireComponent } from './gestionnaire/gestionnaire.component';
+import { BienFormComponent } from './bien-form/bien-form.component';
+import { ProprietaireComponent } from './proprietaire/proprietaire.component';
+import { LocationFormComponent } from './location-form/location-form.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +33,12 @@ import { DirectionComponent } from './direction/direction.component';
     BienListComponent,
     TransactionListComponent,
     DirectionComponent,
+    LocationComponent,
+    VenteComponent,
+    GestionnaireComponent,
+    BienFormComponent,
+    ProprietaireComponent,
+    LocationFormComponent,
     // HomeComponent,
   ],
   imports: [

@@ -1,0 +1,139 @@
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+  
+    <header class="main-header header-style-one">
+        <!--Header Top-->
+        <div class="header-top">
+            <div class="auto-container clearfix">
+                <div class="top-left clearfix">
+                    <div class="text"><span class="icon flaticon-call-answer"></span> Besoin d'aide ? Contactez-nous maintenant : <a href="tel:1800-456-7890" class="number">33 820 84 32</a></div>
+          
+                </div>
+                <div class="top-right clearfix">
+                    <!-- Info List -->
+          <ul class="info-list">
+                        <li><a href="about.html">Notre histoire</a></li>
+                        <li><a href="blog.html">Inspiration</a></li>
+            <li class="quote"><a href="contact.html">Obtenir un devis gratuit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Top -->
+  
+        <!-- Header Upper -->
+        <div class="header-upper">
+            <div class="inner-container">
+                <div class="auto-container clearfix">
+                    <!--Info-->
+                    <div class="logo-outer">
+                        <div class="logo "><a href="index-2.html"><img src="assets/images/CaptureS.SPNG.PNG" alt="" title=""></a></div>
+                    </div>
+                    <div class="nav-outer clearfix">
+                      <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+                      <nav class="main-menu navbar-expand-md navbar-light">
+                          <div class="navbar-header">
+                              <!-- Togg le Button -->      
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="icon flaticon-menu-1"></span>
+                              </button>
+                          </div>
+                          
+  
+                      </nav>
+                      <!-- Main Menu End-->
+          
+          <!-- Outer Box -->
+                      <div class="outer-box clearfix">
+                          <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--End Header Upper-->
+  
+    <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+          <div class="menu-backdrop"></div>
+          <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
+          
+          <nav class="menu-box">
+              <div class="nav-logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+              <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
+      <!--Social Links-->
+      <div class="social-links">
+        <ul class="clearfix">
+          <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+          <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+          <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+          <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+          <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+        </ul>
+              </div>
+          </nav>
+      </div><!-- End Mobile Menu -->
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2 class="text-center" style="color: black;">Ajout et attribution d'un bien a un proprietaire</h2>
+   <div class="login1-container">
+    <div class="container">
+        <br>
+        <div class="container" >
+            <form [formGroup]="bienForm" (ngSubmit)="submitForm()">
+                <div class="form-group" style="color: white;" >
+                    <label for="statut">Type de la propriete</label>
+                    <select id="statutPropriete" formControlName="typePropriete" class="form-control">
+                      <option value="maison">Maison</option>
+                      <option value="villa">Villa</option>
+                      <option value="appartement">Appartement</option>
+                    </select>
+                  </div>
+              
+                <div class="form-group " style="color: white;">
+                  <label for="description">Description</label>
+                  <textarea id="description" formControlName="description" class="form-control"></textarea>
+                </div>
+              
+                <div class="form-group" style="color: white;" >
+                  <label for="prix" >Prix</label>
+                  <input type="number" id="prix" formControlName="prix" class="form-control" />
+                </div>
+            
+                <div class="form-group" style="color: white;">
+                    <label for="prix">Adresse</label>
+                    <input type="text" id="adresse" formControlName="adresse" class="form-control" />
+                  </div>
+            
+                  <div class="form-group" style="color: white;">
+                    <label for="prix">Superficie</label>
+                    <input type="text" id="superficie" formControlName="superficie" class="form-control" />
+                  </div>
+              
+                <div class="form-group" style="color: white;">
+                  <label for="statut">Statut</label>
+                  <select id="statutPropriete" formControlName="statutPropriete" class="form-control">
+                    <option value="Disponible">Disponible</option>
+                    <option value="Loué">Loué</option>
+                    <option value="Vendu">Vendu</option>
+                  </select>
+                </div>
+                <div class="form-group" style="color: white;">
+                    <label for="statut">Proprietaire</label>
+                    <select id="statutPropriete" formControlName="user_id" class="form-control">
+                      <option *ngFor="let s of user" [value]="s.id">{{ s.prenom }} {{ s.nom }}</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-gray">Enregistrer</button>
+              </form>
+        </div>
+
+</div>
+</div> 

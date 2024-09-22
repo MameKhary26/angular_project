@@ -18,4 +18,12 @@ export class TransactionService {
   filterTransactions(from: string, to: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/filter`, { from, to });
   }
+
+  createTransaction(transactionData: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, transactionData);
+  }
+
+  updateTransactionStatus(id: number, statutTransaction: string): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/${id}/statut`, { statutTransaction });
+  }
 }

@@ -150,6 +150,15 @@ export class LoginComponent {
             {
               window.location.href = '/assets/index-2.html';
             }
+            if(pro === "4")
+              {
+                this.router.navigate(['gestionnaire']);
+              }
+              if(pro === "2")
+                {
+                  this.router.navigate(['gestionnaire']);
+                }
+
           this.router.navigate([response.redirect]);
         },
         (error) => {

@@ -39,6 +39,10 @@ export class AuthService {
     return this.http.post(`${this.apiURL}/login`, credentials);
   }
 
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('token'); // Vérifie si un token JWT existe
+  }
+
   inscription(user: any): Observable<any> {
     return this.http.post(`${this.apiURL}/inscription`, user);
   }
