@@ -10,7 +10,7 @@ export class BienListComponent implements OnInit {
   biens: any[] = [];
   filters = {
     adresse: '',
-    type: '',
+    typePropriete: '',
     prix: null,
     // prix_max: null,
     superficie: null,

@@ -35,7 +35,7 @@ export class BienService {
     //   params = params.append('superficie_max', filters.superficie_max);
     // }
 
-    return this.http.get(this.apiUrl, { params });
+    return this.http.get<any>('${this.apiUrl}', { params: filters });
   }
 
   getBiens(): Observable<any> {

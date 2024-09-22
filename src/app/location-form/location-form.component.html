@@ -11,13 +11,18 @@
       <select id="propriete" name="propriete_id" required class="form-control">
         <br>
         <br>
-        <option *ngFor="let propriete of proprietes" [value]="propriete.id">{{ propriete.typePropriete }}</option>
+        <option *ngFor="let propriete of proprietes" [value]="propriete.id">{{ propriete.statutPropriete }}</option>
       </select>
     </div>
   
     <div>
       <label for="montant" style="color: white;">Montant :</label>
       <input type="number" id="montant" [(ngModel)]="transaction.montant" name="montant" required class="form-control">
+    </div>
+
+    <div>
+      <label for="montant" style="color: white;">Date de la transaction :</label>
+      <input type="date" id="montant" [(ngModel)]="transaction.dateTransaction" name="dateTransaction" required class="form-control">
     </div>
     <div>
       <label for="type_transaction" style="color: white;">Type de transaction :</label>

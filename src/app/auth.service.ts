@@ -58,5 +58,10 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
   }
+
+  isGestionnaire(): boolean {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    return user && user.profil === 4;
+  }
 }
 

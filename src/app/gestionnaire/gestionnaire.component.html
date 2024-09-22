@@ -3,7 +3,7 @@
 </div>
 
 <!-- Liste des transactions pour le gestionnaire -->
-
+<form action="acceptTransaction(transaction.id)">
 <table>
     <thead>
       <tr>
@@ -15,16 +15,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let transaction of transactions">
+      <tr *ngFor="let transaction">
         <td>{{ transaction.id }}</td>
         <td>{{ transaction.bien_id }}</td>
         <td>{{ transaction.user_id }}</td>
-        <td>{{ transaction.statut }}</td>
+        <td>{{ transaction.statutTransaction }}</td>
         <td>
-          <button (click)="acceptTransaction(transaction.id)">Accepter</button>
-          <button (click)="rejectTransaction(transaction.id)">Rejeter</button>
+          <button>Accepter</button>
+          <a href="rejectTransaction(transaction.id)">Rejeter</a>
         </td>
       </tr>
     </tbody>
   </table>
-  
+</form>

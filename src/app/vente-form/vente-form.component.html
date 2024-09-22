@@ -1,0 +1,37 @@
+<div class="login1-container">
+    <form (ngSubmit)="onSubmit()">
+        <div>
+          <label for="user" style="color: white;">Utilisateur :</label>
+          <select id="user" [(ngModel)]="transaction.user_id" name="user_id" required class="form-control">
+            <option *ngFor="let user of users" [value]="user.id">{{ user.prenom }}</option>
+          </select>
+        </div>
+        <div>
+          <label for="propriete" style="color: white;">Propriété :</label>
+          <select id="propriete" name="propriete_id" required class="form-control">
+            <br>
+            <br>
+            <option *ngFor="let propriete of proprietes" [value]="propriete.id">{{ propriete.statutPropriete }}</option>
+          </select>
+        </div>
+      
+        <div>
+          <label for="montant" style="color: white;">Montant :</label>
+          <input type="number" id="montant" [(ngModel)]="transaction.montant" name="montant" required class="form-control">
+        </div>
+    
+        <div>
+          <label for="montant" style="color: white;">Date de la transaction :</label>
+          <input type="date" id="montant" [(ngModel)]="transaction.dateTransaction" name="dateTransaction" required class="form-control">
+        </div>
+        <div>
+          <label for="type_transaction" style="color: white;">Type de transaction :</label>
+          <select id="type_transaction" [(ngModel)]="transaction.typeTransaction" name="type_transaction" required class="form-control">
+            <option value="location">Location</option>
+            <option value="location">Vente</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-gray">Effectuer la location</button>
+      </form>
+    </div> 

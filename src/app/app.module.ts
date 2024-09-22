@@ -22,6 +22,7 @@ import { BienFormComponent } from './bien-form/bien-form.component';
 import { ProprietaireComponent } from './proprietaire/proprietaire.component';
 import { LocationFormComponent } from './location-form/location-form.component';
 import { AuthService } from './auth.service';
+import { VenteFormComponent } from './vente-form/vente-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AuthService } from './auth.service';
     BienFormComponent,
     ProprietaireComponent,
     LocationFormComponent,
+    VenteFormComponent,
     // HomeComponent,
   ],
   imports: [
