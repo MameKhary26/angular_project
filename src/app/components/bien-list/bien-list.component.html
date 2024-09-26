@@ -1,35 +1,133 @@
-<form (ngSubmit)="searchBiens()" #searchForm="ngForm">
-  <div class="form-group">
-    <label for="typePropriete">Type de bien</label>
+<div class="page-wrapper">
+  <!-- Preloader -->
+  <!-- <div class="preloader"></div> -->
+
+  <header class="main-header header-style-one">
+      <!--Header Top-->
+      <div class="header-top">
+          <div class="auto-container clearfix">
+              <div class="top-left clearfix">
+                  <div class="text"><span class="icon flaticon-call-answer"></span> Besoin d'aide ? Contactez-nous maintenant : <a href="tel:1800-456-7890" class="number">33 820 84 32</a></div>
+        
+              </div>
+              <div class="top-right clearfix">
+                  <!-- Info List -->
+        <ul class="info-list">
+                      <li><a href="about.html">Notre histoire</a></li>
+                      <li><a href="blog.html">Inspiration</a></li>
+          <li class="quote"><a href="contact.html">Obtenir un devis gratuit</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- End Header Top -->
+
+      <!-- Header Upper -->
+      <div class="header-upper">
+          <div class="inner-container">
+              <div class="auto-container clearfix">
+                  <!--Info-->
+                  <div class="logo-outer">
+                      <div class="logo "><a href="index-2.html"><img src="assets/images/CaptureS.SPNG.PNG" alt="" title=""></a></div>
+                  </div>
+                  <div class="nav-outer clearfix">
+                    <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+                    <nav class="main-menu navbar-expand-md navbar-light">
+                        <div class="navbar-header">
+                            <!-- Togg le Button -->      
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon flaticon-menu-1"></span>
+                            </button>
+                        </div>
+                        
+
+                    </nav>
+                    <!-- Main Menu End-->
+        
+        <!-- Outer Box -->
+                    <div class="outer-box clearfix">
+                        <div class="search-box-btn"><span class="icon flaticon-magnifying-glass-1"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Header Upper-->
+
+  <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
+        
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index-2.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+            <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
+    <!--Social Links-->
+    <div class="social-links">
+      <ul class="clearfix">
+        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+        <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+      </ul>
+            </div>
+        </nav>
+    </div><!-- End Mobile Menu -->
+</header>
+<br>
+<br>
+<br>
+<br>
+<div class="contain">
+  <div class="login-container">
+    <div class="container">
+      <h1 class="text-center" style="color: white;">Filtrage des biens</h1>
+  <form (ngSubmit)="onSearch()" #searchForm="ngForm">
+  <!-- <div class="form-group">
+    <label for="typePropriete" style="color: white;">Type de bien</label>
     <input type="text" id="typePropriete" [(ngModel)]="filters.typePropriete" formControlName="typePropriete" class="form-control">
+  </div> -->
+  <div class="form-group" style="color: white;" >
+    <label for="typePropriete">Type de la propriete</label>
+    <select id="typePropriete" [(ngModel)]="filters.typePropriete" formControlName="typePropriete" class="form-control">
+      <option value="maison">Maison</option>
+      <option value="villa">Villa</option>
+      <option value="appartement">Appartement</option>
+    </select>
   </div>
 
   <div class="form-group">
-    <label for="adresse">Localisation</label>
+    <label for="adresse" style="color: white;">Localisation</label>
     <input type="text" id="adresse" [(ngModel)]="filters.adresse" formControlName="adresse" class="form-control">
   </div>
 
   <div class="form-group">
-    <label for="superficie">Superficie</label>
+    <label for="superficie" style="color: white;">Superficie</label>
     <input type="text" id="superficie" [(ngModel)]="filters.superficie" formControlName="superficie" class="form-control">
   </div>
 
   <div class="form-group">
-    <label for="prixMin">Prix</label>
-    <input type="number" id="prixMin" [(ngModel)]="filters.prix" formControlName="prixMin" class="form-control">
+    <label for="prix" style="color: white;">Prix</label>
+    <input type="number" id="prix" [(ngModel)]="filters.prix" formControlName="prix" class="form-control">
   </div>
 
   <button type="submit" class="btn btn-primary">Rechercher</button>
+  <!-- <button type="button" (click)="onSearch()">Rechercher</button> -->
 </form>
 
 <!-- Liste des biens -->
-<div *ngIf="biens && biens.length > 0">
+<!-- <div *ngIf="biens && biens.length > 0">
   <h3>Biens disponibles :</h3>
   <ul>
     <li *ngFor="let bien of biens">
-      <strong>{{ bien.typePropriete }}</strong> - {{ bien.adresse }} - {{ bien.prix }}€
+      <strong>{{ bien.typePropriete }}</strong> - {{ bien.adresse }} - {{ bien.prix }}€ - {{ bien.superficie}}
     </li>
   </ul>
+</div> -->
+</div>
+</div>
+</div>
 </div>
 
 <!-- <div *ngIf="biens && biens.length === 0">

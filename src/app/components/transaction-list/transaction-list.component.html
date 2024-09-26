@@ -1,6 +1,11 @@
-<div class="login-container">
+<div class="login1-container">
 <div class="container">
-    <h2>Mes Transactions</h2>
+    <h2 class="text-center" style="color: white;">Liste des transactions</h2>
+    <div>
+      <a href="bien-form" type="submit" style="color: white;">AjouterBien</a>
+  </div>
+  <!-- Liste des transactions pour le gestionnaire -->
+  <form action="acceptTransaction(transaction.id)">
     <table class="table">
       <thead>
         <tr>
@@ -9,6 +14,10 @@
           <th>Montant</th>
           <th>Date</th>
           <th>Statut</th>
+          <th>Propriete</th>
+          <th>Utilisateur</th>
+          <th>Actions</th>
+
         </tr>
       </thead>
       <tbody>
@@ -18,11 +27,18 @@
           <td>{{ transaction.montant }} €</td>
           <td>{{ transaction.dateTransaction }}</td>
           <td>{{ transaction.statutTransaction }}</td>
+          <td>{{ transaction.propriete_id}}</td>
+          <td>{{ transaction.user_id}}</td>
+          <td>
+            <button>Accepter</button>
+            <button type="submit" class="btn btn-danger" onclick ="rejectTransaction(transaction.id)">Rejeter</button>
+          </td>
         </tr>
       </tbody>
       <br>
-      <a href="http://localhost:8000/api/transactions/download-pdf" class="btn btn-primary">Télécharger le rapport PDF</a>
+      <!-- <a href="http://localhost:8000/api/transactions/download-pdf" class="btn btn-primary">Télécharger le rapport PDF</a> -->
     </table>
+    </form>
   </div>
 </div>
   

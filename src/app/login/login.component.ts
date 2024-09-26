@@ -147,17 +147,17 @@ export class LoginComponent {
             this.router.navigate(['user-list']);
           }
           if(pro === "0")
-            {
+          {
               window.location.href = '/assets/index-2.html';
-            }
-            if(pro === "4")
-              {
-                this.router.navigate(['gestionnaire']);
-              }
-              if(pro === "2")
-                {
-                  this.router.navigate(['gestionnaire']);
-                }
+          }
+          // if(pro === "4")
+          // {
+          //       this.router.navigate(['gestionnaire']);
+          // }
+           if(pro === "4")
+          {
+                  this.router.navigate(['transaction-list']);
+          }
 
           this.router.navigate([response.redirect]);
         },

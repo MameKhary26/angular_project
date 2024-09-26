@@ -1,0 +1,24 @@
+<div class="login2-container">  
+    
+<div *ngIf="biens.length > 0">
+    <br><br><br>
+    <h2 style="color: white;">Biens disponibles</h2>
+    <ul>
+       <div class="biens-container">
+            <div  *ngFor="let bien of biens" class="bien-card">   
+                <h3>{{ bien.typePropriete }}</h3>
+                <p>Adresse: {{ bien.adresse }}</p>
+                <p>Prix: {{ bien.prix }}</p>
+                <p>Statut: {{ bien.statutPropriete }}</p>
+                <p>Superficie: {{ bien.superficie }}</p>
+                <p>Description: {{ bien.description }}</p>
+                <p>Proprietaire: {{ bien.user_id }}</p>
+            </div>
+        </div>
+    </ul>
+  </div>
+</div>
+  <!-- <div *ngIf="biens.length === 0">
+    <p>Aucun bien disponible.</p>
+  </div> -->
+  

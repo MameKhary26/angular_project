@@ -9,6 +9,14 @@ import { GestionnaireComponent } from '../../gestionnaire/gestionnaire.component
 export class TransactionListComponent implements OnInit {
 
   transactions: any[] = [];
+  // newTransaction = {
+  //   typeTransaction: 'location',
+  //   montant: '',
+  //   dateTransaction: '',
+  //   statutTransaction: 'en attente',
+  //   propriete_id: '',
+  //   user_id : ''
+  // };
 
   constructor(private transactionService: TransactionService) {}
 

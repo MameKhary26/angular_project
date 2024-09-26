@@ -14,6 +14,8 @@ import { VenteComponent } from './vente/vente.component';
 import { BienFormComponent } from './bien-form/bien-form.component';
 import { LocationFormComponent } from './location-form/location-form.component';
 import { GestionnaireComponent } from './gestionnaire/gestionnaire.component';
+import { VenteFormComponent } from './vente-form/vente-form.component';
+import { ListeBienDispoComponent } from './liste-bien-dispo/liste-bien-dispo.component';
 
 // import{ loginGuard } from '. /guard/login.guard';
 
@@ -22,6 +24,18 @@ const routes: Routes = [
   { 
     path: '', 
     component: AccueilComponent,
+    // pathMatch: 'full'
+  },
+
+  { 
+    path: 'liste-bien-dispo', 
+    component: ListeBienDispoComponent,
+    // pathMatch: 'full'
+  },
+
+  { 
+    path: 'vente-form', 
+    component: VenteFormComponent,
     // pathMatch: 'full'
   },
   { 

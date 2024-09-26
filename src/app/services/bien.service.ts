@@ -13,31 +13,34 @@ export class BienService {
     return this.http.get<any[]>(`${this.apiUrl}/disponibles`);
   }
 
-  searchBiens(filters: any): Observable<any> {
-    let params = new HttpParams();
+  // searchBiens(filters: any): Observable<any> {
+  //   let params = new HttpParams();
 
-    if (filters.adresse) {
-      params = params.append('adresse', filters.adresse);
-    }
-    if (filters.typePropriete) {
-      params = params.append('typePropriete', filters.typePropriete);
-    }
-    if (filters.prix) {
-      params = params.append('prix', filters.prix);
-    }
-    // if (filters.prix_max) {
-    //   params = params.append('prix_max', filters.prix_max);
-    // }
-    if (filters.superficie) {
-      params = params.append('superficie', filters.superficie);
-    }
-    // if (filters.superficie_max) {
-    //   params = params.append('superficie_max', filters.superficie_max);
-    // }
+  //   if (filters.adresse) {
+  //     params = params.append('adresse', filters.adresse);
+  //   }
+  //   if (filters.typePropriete) {
+  //     params = params.append('typePropriete', filters.typePropriete);
+  //   }
+  //   if (filters.prix) {
+  //     params = params.append('prix', filters.prix);
+  //   }
+  //   // if (filters.prix_max) {
+  //   //   params = params.append('prix_max', filters.prix_max);
+  //   // }
+  //   if (filters.superficie) {
+  //     params = params.append('superficie', filters.superficie);
+  //   }
+  //   // if (filters.superficie_max) {
+  //   //   params = params.append('superficie_max', filters.superficie_max);
+  //   // }
 
-    return this.http.get<any>('${this.apiUrl}', { params: filters });
+  //   return this.http.get<any>(`${this.apiUrl}/biens`, { params: filters });
+  // }
+
+  searchBiens(filters: any): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/biens`, { params: filters });
   }
-
   getBiens(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
@@ -67,5 +70,9 @@ export class BienService {
   }
   getBienP(): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/disponibles`);
+  }
+
+  getListeBienDispo(filters: any): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/disponibles`, { params: filters });
   }
 }

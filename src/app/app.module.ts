@@ -23,6 +23,8 @@ import { ProprietaireComponent } from './proprietaire/proprietaire.component';
 import { LocationFormComponent } from './location-form/location-form.component';
 import { AuthService } from './auth.service';
 import { VenteFormComponent } from './vente-form/vente-form.component';
+import { ListeBienDispoComponent } from './liste-bien-dispo/liste-bien-dispo.component';
+import { MesTransactionsComponentComponent } from './mes-transactions-component/mes-transactions-component.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { VenteFormComponent } from './vente-form/vente-form.component';
     ProprietaireComponent,
     LocationFormComponent,
     VenteFormComponent,
+    ListeBienDispoComponent,
+    MesTransactionsComponentComponent,
     // HomeComponent,
   ],
   imports: [

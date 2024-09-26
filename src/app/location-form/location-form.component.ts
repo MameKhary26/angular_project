@@ -3,6 +3,8 @@ import { TransactionService } from '../services/transaction.service';
 import { HttpClient } from '@angular/common/http';
 import { BienService } from '../services/bien.service';
 import { Transaction } from '../model/transaction.model';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-location-form',
   templateUrl: './location-form.component.html',
@@ -20,10 +22,18 @@ export class LocationFormComponent implements OnInit{
     statutTransaction:'en attente',
     dateTransaction:''
   };
+  transactionForm!: FormGroup;
 
-  constructor(private bienService: BienService, private transactionService: TransactionService, private http: HttpClient) { }
+  constructor(private fb: FormBuilder ,private bienService: BienService, private router: Router ,private transactionService: TransactionService, private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.transactionForm = this.fb.group({
+      user_id: ['',[Validators.required]],
+      propriete_id: ['',[Validators.required]],
+      montant: ['',[Validators.required]],
+      dateTransaction: ['',[Validators.required]],
+      typeTransaction: ['',[Validators.required]],
+    });
     this.fetchUsers();
     this.fetchProprietes();
   }
@@ -50,9 +60,16 @@ export class LocationFormComponent implements OnInit{
 
   // Soumettre le formulaire pour effectuer la transaction
   onSubmit(): void {
-    this.transactionService.createTransaction(this.transaction).subscribe(
+    const formData = new FormData();
+    formData.append('user_id', this.transactionForm.get('user_id')?.value);
+    formData.append('propriete_id', this.transactionForm.get('propriete_id')?.value);
+    formData.append('montant', this.transactionForm.get('montant')?.value);
+    formData.append('dateTransaction', this.transactionForm.get('dateTransaction')?.value);
+    formData.append('typeTransaction', this.transactionForm.get('typeTransaction')?.value);
+    this.transactionService.createTransaction(formData).subscribe(
       response => {
         console.log('Transaction effectuée avec succès', response);
+        this.router.navigate(['/location']);
       },
       error => {
         console.error('Erreur lors de la transaction', error);

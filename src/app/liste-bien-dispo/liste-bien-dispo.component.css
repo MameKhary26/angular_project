@@ -1,0 +1,76 @@
+.login2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url('/assets/images/main-slider/7.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    backdrop-filter: blur(5px); 
+    
+  }
+
+form {
+    /* background-color: rgba(255, 255, 255, 0.8);  */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    width: 300px; 
+    
+}
+
+.form-group {
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    width: 80%;
+    
+  }
+
+  .biens-container {
+    display: flex; /* Active Flexbox */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: space-between; /* Espace entre les éléments */
+    margin: 0 -10px; /* Ajoute de l'espacement négatif pour compenser les marges */
+}
+
+  .bien-card {
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    margin: 10px 0; /* Espacement vertical entre les biens */
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    flex: 1 1 calc(30% - 20px);
+}
+
+.bien-card h3 {
+    color: #333; /* Couleur du titre */
+}
+
+.bien-card p {
+    color: #666; /* Couleur du texte */
+}
+  

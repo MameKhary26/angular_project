@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransactionService } from '../services/transaction.service';
 
 @Component({
   selector: 'app-gestionnaire',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './gestionnaire.component.css'
 })
 export class GestionnaireComponent {
+
+  constructor(private transactionService: TransactionService) {}
+  
 
 }
